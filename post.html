@@ -19,11 +19,15 @@ layout: default
             </li>
             <li>
                 Posted at:
-                    <abbr class="published" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</abbr>
+                <abbr class="published" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</abbr>
             </li>
             <li>
                 Updated at:
+                {% if page.updated != "" %}
                 <abbr class="updated" title="{{ page.updated }}">{{ page.updated | date_to_long_string }}</abbr>
+                {% else %}
+                <abbr class="updated" title="{{ page.date }}">{{ page.date | date_to_long_string }}</abbr>
+                {% endif %}
             </li>
             <li>
                 Related posts:
