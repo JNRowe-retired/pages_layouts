@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<div class="hentry">
+    <h2 class="entry-title">{{ page.title }}</h2>
+    <div class="entry-summary">
+        {{ page.description }}
+    </div>
+    <div class="entry-content">
+        {{ content }}
+    </div>
+    <div class="page_meta">
+        <ul>
+            <li>
+                <a href="{{ page.url }}" rel="bookmark" title="Permalink">Permalink</a>
+                {% if page.tinyurl != "" %}
+                <small>(<a href="http://tinyurl.com/{{ page.tinyurl }}">TinyURL link for this page</a>)</small>
+                {% endif %}
+            </li>
+            <li>
+                Posted at:
+                    <abbr class="published" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</abbr>
+            </li>
+            <li>
+                Updated at:
+                <abbr class="updated" title="{{ page.updated }}">{{ page.updated | date_to_long_string }}</abbr>
+            </li>
+            <li>
+                Related posts:
+                <ul>
+                {% for post in site.related_posts limit:3 %}
+                    <li>
+                        <span>{{ post.date | date_to_string }}</span> -
+                        “<a href="{{ post.url }}">{{ post.title }}</a>”
+                    </li>
+                {% endfor %}
+                </ul>
+            </li>
+            <li>
+                <span class="tags">Tags:
+                {% for tag in page.topics %}
+                    <a href="http://technorati.com/tags/{{ tag }}/" rel="tag directory">{{ tag }}</a>
+                {% endfor %}
+                </span>
+            </li>
+            <li>
+                Posted by:
+                <span class="author vcard"><a class="url fn" rel="me" href="/contact.html">James Rowe</a></span>
+            </li>
+            <li>
+                Rights: © <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe.
+            </li>
+        </ul>
+        <p>
+            <a href="#content">Return to Top</a>
+        </p>
+    </div>
+    <div class="clearer"></div>
+</div>
+
+<!-- vim: set ft=liquid sw=4 sts=4 et tw=80 fileencoding=utf-8: -->
