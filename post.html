@@ -26,7 +26,7 @@ layout: default
                 {% if page.updated != "" %}
                 <abbr class="updated" title="{{ page.updated }}">{{ page.updated | date_to_long_string }}</abbr>
                 {% else %}
-                <abbr class="updated" title="{{ page.date }}">{{ page.date | date_to_long_string }}</abbr>
+                <abbr class="updated" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</abbr>
                 {% endif %}
             </li>
             <li>
