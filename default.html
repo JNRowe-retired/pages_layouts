@@ -26,6 +26,12 @@
         <link rel="search" title="Search" href="/search.html" />
         <link rel="copyright" title="Copyright" href="/copyright.html" />
         <link rel="top" title="JNRowe" href="/index.html" />
+        {% if page.next %}
+        <link rel="next" title="{{ page.next.title }}" href="{{ page.next.url }}" />
+        {% endif %}
+        {% if page.prev %}
+        <link rel="prev" title="{{ prev.prev.title }}" href="{{ page.prev.url }}" />
+        {% endif %}
         <link rel="home" title="Home page" href="/index.html" />
         <link rel="help" title="Accessibility" href="/accessibility.html" />
         <link rel="glossary" title="Site glossary" href="/glossary.html" />
