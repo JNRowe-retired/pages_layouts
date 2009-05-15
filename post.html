@@ -17,7 +17,7 @@ layout: default
         <ul>
             <li>
                 <a href="{{ page.url }}" rel="bookmark" title="Permalink">Permalink</a>
-                {% if page.tinyurl != "" %}
+                {% if page.tinyurl %}
                 <small>(<a href="http://tinyurl.com/{{ page.tinyurl }}">TinyURL link for this page</a>)</small>
                 {% endif %}
             </li>
@@ -27,7 +27,7 @@ layout: default
             </li>
             <li>
                 Updated at:
-                {% if page.updated != "" %}
+                {% if page.updated %}
                 <abbr class="updated" title="{{ page.updated }}">{{ page.updated | date_to_long_string }}</abbr>
                 {% else %}
                 <abbr class="updated" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</abbr>
@@ -35,7 +35,9 @@ layout: default
             </li>
             <li>
                 Related posts:
-                {% if site.related_posts[0].title != "" %}
+                {% if site.related_posts | size > 0 %}
+                    <em>No related items</em>
+                {% else %}
                     <ul>
                     {% for post in site.related_posts limit:3 %}
                         <li>
@@ -44,8 +46,6 @@ layout: default
                         </li>
                     {% endfor %}
                     </ul>
-                {% else %}
-                    <em>No related items</em>
                 {% endif %}
             </li>
             <li>
