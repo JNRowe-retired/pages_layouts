@@ -50,9 +50,13 @@ layout: default
             </li>
             <li>
                 <span class="tags">Tags:
-                {% for tag in page.topics %}
-                    <a href="http://technorati.com/tags/{{ tag }}/" rel="tag directory">{{ tag }}</a>
-                {% endfor %}
+                {% if page.topics %}
+                    {% for tag in page.topics %}
+                        <a href="http://technorati.com/tags/{{ tag }}/" rel="tag directory">{{ tag }}</a>
+                    {% endfor %}
+                {% else %}
+                    <em>No tag data</em>
+                {% endif %}
                 </span>
             </li>
             <li>
