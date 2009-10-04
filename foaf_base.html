@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xml:lang="en-gb"
+  {{ page.namespaces | join " " }}
+>
+
+  <!--
+  This FOAF file is a significantly cut down version, if you have access
+  to the AST servers use that version as it contains considerably more
+  information.
+
+  This version is automatically generated from the full version, and
+  should be fully functional at all times(please report it if not).
+  -->
+
+  <rdf:Description rdf:about="">
+    <dc:title>{{ page.title | escape }}</dc:title>
+    <dc:creator rdf:resource="{{ page.creator_location }}" />
+    <dc:date>{{ page.created }}</dc:date>
+    <dc:description>
+        {{ page.file_description }}
+    </dc:description>
+    <dc:language>en-gb</dc:language>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/PersonalProfileDocument" />
+    <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/" />
+    <admin:generatorAgent rdf:resource="http://github.com/mojombo/jekyll" />
+    <admin:errorReportsTo rdf:resource="mailto:jnrowe@gmail.com" />
+    <!-- Not working 
+    <wot:assurance rdf:resource="{{file}}.asc" />
+    <wot:sigdate>@SIGDATE@</wot:sigdate>
+    -->
+  </rdf:Description>
+
+  {{ content }}
+
+</rdf:RDF>
+
