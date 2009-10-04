@@ -9,7 +9,7 @@ layout: default
     <div class="entry-content">
         {{ content }}
         <hr />
-        {% if site.disqus == true %}
+        {% if site.disqus %}
             {% if page.no-disqus != true %}
                 <div id="disqus_thread"></div>
                 <script type="text/javascript" src="http://disqus.com/forums/jnrowe/embed.js" />
@@ -71,7 +71,7 @@ layout: default
                 Rights: © <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe.
             </li>
         </ul>
-        {% if site.disqus == true %}
+        {% if site.disqus %}
             {% if page.no-disqus != true %}
                 <p><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></p>
             {% endif %}
