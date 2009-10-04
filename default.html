@@ -81,7 +81,7 @@
         </div>
 
         {% if site.disqus %}
-            {% if page.no-disqus != true %}
+            {% unless page.no-disqus %}
             <script type="text/javascript">
             //<![CDATA[
                 (function() {
@@ -96,7 +96,7 @@
                 })();
             //]]>
             </script>
-            {% endif %}
+            {% endunless %}
         {% endif %}
 
         <script type="text/javascript">
