@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
         <meta name="ICBM" content="51.4887, -0.1395" />
         <meta name="description" content="{{ page.description }}" />
-        <meta name="keywords" content="{{ page.topics | join:", " }}" />
+        <meta name="keywords" content="{% if page.categories %}{{ page.categories | array_to_sentence_string }}{% else %}jnrowe{% endif %}" />
         <title>{% if page.title %}{{ page.title }} − {% endif %}JNRowe</title>
         <link rel="stylesheet" href="/css/content.css" type="text/css" />
         <link rel="stylesheet" href="/css/design.css" type="text/css" />
