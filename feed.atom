@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/static/atom.css" type="text/css"?>
+<?xml-stylesheet href="/static/pygments.css" type="text/css"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xml:base="http://jnrowe.github.com/"
+    xml:lang="en-gb">
+    <title type="text">JNRowe</title>
+    <subtitle type="text">{% if page.subtitle %}{{ page.subtitle }}{% else %}Dumping ground{% endif %}</subtitle>
+    <id>{{ page.id }}</id>
+    <link rel="alternate" type="application/xhtml+xml" href="{{ page.alternate }}" />
+    <link rel="self" href="{{ page.url }}" />
+    <icon>/static/icon.png</icon>
+    <author>
+        <name>James Rowe</name>
+        <uri>http://jnrowe.github.com/</uri>
+        <email>jnrowe@gmail.com</email>
+    </author>
+    <generator uri="http://github.com/mojombo/jekyll">Jekyll</generator>
+    <rights type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            Copyright &#169; 2009, James Rowe
+        </div>
+    </rights>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+
+    {{ content }}
+</feed>
+
+{% comment %}
+<!-- vim: set ft=liquid sw=4 sts=4 et tw=80 fileencoding=utf-8: -->
+{% endcomment %}
