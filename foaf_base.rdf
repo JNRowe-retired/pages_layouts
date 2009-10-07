@@ -14,7 +14,7 @@
   -->
 
   <rdf:Description rdf:about="">
-    <dc:title>{{ page.title | escape }}</dc:title>
+    <dc:title>{{ page.title | xml_escape }}</dc:title>
     <dc:creator rdf:resource="{{ page.creator_location }}" />
     <dc:date>{{ page.created }}</dc:date>
     <dc:description>
