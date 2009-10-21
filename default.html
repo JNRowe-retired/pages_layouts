@@ -19,6 +19,9 @@
                 <link rel="stylesheet" href="/css/{{ css }}.css" />
             {% endfor %}
         {% endif %}
+        <!--[if lte IE 8]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" />
+        <![endif]-->
         <link rel="transformation" href="/static/extract-metadata.xsl" />
         <link rel="meta" type="application/rdf+xml" title="FOAF" href="/static/foaf.rdf" />
         <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
