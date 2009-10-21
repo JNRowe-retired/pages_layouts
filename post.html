@@ -27,14 +27,14 @@ layout: default
             </li>
             <li>
                 Posted at:
-                <abbr class="published" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</abbr>
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
             </li>
             <li>
                 Updated at:
                 {% if page.updated %}
-                <abbr class="updated" title="{{ page.updated }}">{{ page.updated | date_to_long_string }}</abbr>
+                <time datetime="{{ page.updated }}">{{ page.updated | date_to_long_string }}</time>
                 {% else %}
-                <abbr class="updated" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</abbr>
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
                 {% endif %}
             </li>
             <li>
