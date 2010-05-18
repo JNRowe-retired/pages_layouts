@@ -59,9 +59,12 @@
 
             <div id="content" class="hfeed">
                 <header>
-                   <h1 class="masthead">
-                       <a href="/index.html" rel="home author me" accesskey="1">JNRowe</a>
+                    <h1 class="masthead">
+                        <a href="/index.html" rel="home author me" accesskey="1">
+                            {% if page.main_header %}{{ page.main_header }}{% else%}JNRowe{% endif %}
+                        </a>
                     </h1>
+
                 </header>
                 <nav>
                     <ul class="skipvisual">
