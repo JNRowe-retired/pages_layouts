@@ -28,6 +28,7 @@
         <link rel="openid.delegate" href="http://openid.claimid.com/jnrowe" />
         <link rel="shortcut icon" href="/static/icon.png" type="image/png" />
         <link rel="author" title="About these documents" href="/about.html" />
+        <link rel="pavatar" href="http://jnrowe.github.com/static/pavatar.png" />
         <link rel="index" title="Index" href="/index.html" />
         <link rel="search" title="Search" href="/search.html" />
         <link rel="contents" title="Full journal listings" href="/contents.html" />
@@ -64,7 +65,6 @@
                             {% if page.main_header %}{{ page.main_header }}{% else%}JNRowe{% endif %}
                         </a>
                     </h1>
-
                 </header>
                 <nav>
                     <ul class="skipvisual">
@@ -102,21 +102,6 @@
             </script>
             {% endunless %}
         {% endif %}
-
-        <script>
-        //<![CDATA[
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' %3E%3C/script%3E"));
-        //]]>
-        </script>
-        <script>
-        //<![CDATA[
-            try {
-                var pageTracker = _gat._getTracker("UA-8604920-2");
-                pageTracker._trackPageview();
-            } catch(err) {}
-        //]]>
-        </script>
     </body>
 </html>
 
