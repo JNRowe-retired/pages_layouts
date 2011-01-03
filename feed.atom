@@ -19,7 +19,7 @@
     <generator uri="http://github.com/mojombo/jekyll">Jekyll</generator>
     <rights type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-            Copyright &#169; 2010, James Rowe
+            Copyright &#169; 2010-2011, James Rowe
         </div>
     </rights>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
